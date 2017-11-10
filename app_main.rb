@@ -26,7 +26,7 @@ post '/callback' do
     case event
     when Line::Bot::Event::Postback
       puts "-----------"
-      puts event.postback.data
+      puts event['postback']['data']
       puts "-----------"
     when Line::Bot::Event::Message
       case event.type
