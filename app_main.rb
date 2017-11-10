@@ -40,19 +40,19 @@ post '/callback' do
               title: "title",
               text: "Please select ",
               actions: [
-                  # {
-                  #   type: "postback",
-                  #   label: "Buy",
-                  #   data: "action=buy&itemid=123"
-                  # },
-                  # {
-                  #   type: "uri",
-                  #   label: "View detail",
-                  #   data: "tel:09012345678"
-                  # },
+                  {
+                    type: "postback",
+                    label: "Buy",
+                    data: "action=buy&itemid=123"
+                  },
                   {
                     type: "uri",
-                    label: "View detail",
+                    label: "電話する",
+                    data: "tel:09012345678"
+                  },
+                  {
+                    type: "uri",
+                    label: "詳細",
                     uri: "https://www.flickr.com/photos/matsuhisa/35370997765"
                   }
               ]
