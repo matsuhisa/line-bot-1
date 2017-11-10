@@ -45,11 +45,11 @@ post '/callback' do
                     label: "Buy",
                     data: "action=buy&itemid=123"
                   },
-                  # {
-                  #   type: "uri",
-                  #   label: "電話する",
-                  #   data: "tel:09012345678"
-                  # },
+                  {
+                    type: "uri",
+                    label: "電話する",
+                    uri: "tel:09012345678"
+                  },
                   {
                     type: "uri",
                     label: "詳細",
