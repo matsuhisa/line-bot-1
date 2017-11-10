@@ -25,9 +25,10 @@ post '/callback' do
 
     case event
     when Line::Bot::Event::Postback
-      puts "-----------"
-      puts event['postback']['data']
-      puts "-----------"
+      # puts "-----------"
+      # puts event['postback']['data']
+      # puts "-----------"
+      client.reply_message(event['replyToken'], event['postback']['data'])
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
