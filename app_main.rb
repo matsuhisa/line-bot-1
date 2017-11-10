@@ -32,28 +32,28 @@ post '/callback' do
         # }
 
         message = {
-          "type": "template",
-          "altText": "this is a buttons template",
-          "template": {
-              "type": "buttons",
-              "thumbnailImageUrl": "https://farm5.staticflickr.com/4244/35370997765_5f65dd60da_k_d.jpg",
-              "title": "Menu タイトル",
-              "text": "Please select ",
-              "actions": [
+          type: "template",
+          altText: "this is a buttons template",
+          template: {
+              type: "buttons",
+              thumbnailImageUrl: "https://farm5.staticflickr.com/4244/35370997765_5f65dd60da_k_d.jpg",
+              title: "title",
+              text: "Please select ",
+              actions: [
+                  # {
+                  #   type: "postback",
+                  #   label: "Buy",
+                  #   data: "action=buy&itemid=123"
+                  # },
+                  # {
+                  #   type: "uri",
+                  #   label: "View detail",
+                  #   data: "tel:09012345678"
+                  # },
                   {
-                    "type": "postback",
-                    "label": "Buy",
-                    "data": "action=buy&itemid=123"
-                  },
-                  {
-                    "type": "uri",
-                    "label": "View detail",
-                    "data": "tel:09012345678"
-                  },
-                  {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "https://www.flickr.com/photos/matsuhisa/35370997765"
+                    type: "uri",
+                    label: "View detail",
+                    uri: "https://www.flickr.com/photos/matsuhisa/35370997765"
                   }
               ]
           }
