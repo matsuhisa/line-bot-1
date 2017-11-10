@@ -12,6 +12,8 @@ def client
   }
 end
 
+post ''
+
 post '/callback' do
   body = request.body.read
 
@@ -23,11 +25,11 @@ post '/callback' do
   events = client.parse_events_from(body)
   events.each { |event|
 
-    puts "-----------"
-    puts event
-    puts "-----------"
-
     case event
+    when Line::Bot::Event::Postback
+      puts "-----------"
+      puts event.postback.params
+      puts "-----------"
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
