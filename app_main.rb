@@ -26,9 +26,11 @@ post '/callback' do
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
+        emoji_text = "#{event.message['text']} \uDBC0\uDC84"
+        text = "\uDBC0\uDC84 LINE emoji"
         message = {
           type: 'text',
-          text: "#{event.message['text']} \uDBC0\uDC84"
+          text: text
         }
         client.reply_message(event['replyToken'], message)
       when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
