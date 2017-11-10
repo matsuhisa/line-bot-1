@@ -22,6 +22,11 @@ post '/callback' do
 
   events = client.parse_events_from(body)
   events.each { |event|
+
+    puts "-----------"
+    puts event
+    puts "-----------"
+
     case event
     when Line::Bot::Event::Message
       case event.type
