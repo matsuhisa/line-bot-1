@@ -12,8 +12,6 @@ def client
   }
 end
 
-post ''
-
 post '/callback' do
   body = request.body.read
 
